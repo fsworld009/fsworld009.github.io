@@ -1,4 +1,4 @@
 {
-  "extends": "./tsconfig.json",
-  "exclude": [".eslintrc.js"]
+  "extends": "./src/tsconfig.json",
+  "include": [".eslintrc.js", "**/*.js", "**/*.ts", "**/*.vue"]
 }

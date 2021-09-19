@@ -48,7 +48,7 @@
 <script lang="ts">
 import Vue from 'vue'
 
-let a: int = 3
+let a: number = 3
 export default Vue.extend({
   
 })
