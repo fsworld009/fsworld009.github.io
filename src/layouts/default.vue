@@ -1,6 +1,10 @@
 <template>
   <div class="frame">
-    <div class="frame__left"></div>
+    <div class="frame__left">
+      <div class="frame__vertical-container">
+        <Dpad />
+      </div>
+    </div>
     <div class="frame__middle">
       <div class="frame__top"></div>
       <div class="frame__content_container"><Nuxt class="frame__content"/></div>
@@ -67,6 +71,18 @@
   flex: 0 0 @frame_bottom_height;
   @media screen and (max-width: @mobile_max_width) {
     flex-basis: @frame_size_with_buttons;
+  }
+}
+
+.frame__vertical-container {
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  @media screen and (max-width: @mobile_max_width) {
+    display: none;
   }
 }
 </style>
