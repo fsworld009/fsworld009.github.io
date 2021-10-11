@@ -30,6 +30,7 @@
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
     "less-loader": "7.3.0",
+    "normalize.css": "8.0.1",
     "pinia": "2.0.0-rc.12",
     "prettier": "2.4.1",
     "vue-eslint-parser": "7.11.0"
