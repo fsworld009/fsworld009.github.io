@@ -10,7 +10,11 @@
       <div class="frame__content_container"><Nuxt class="frame__content"/></div>
       <div class="frame__bottom"></div>
     </div>
-    <div class="frame__right"></div>
+    <div class="frame__right">
+      <div class="frame__vertical-container">
+        <ControlButtons />
+      </div>
+    </div>
   </div>
 </template>
 

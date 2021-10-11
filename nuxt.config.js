@@ -6,7 +6,7 @@ export default {
   head: {
     title: 'fsworld009',
     htmlAttrs: {
-      lang: 'en'
+      lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
@@ -21,6 +21,7 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
+    '~/styles/global.less',
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
