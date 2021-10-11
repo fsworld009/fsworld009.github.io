@@ -8,7 +8,12 @@
     <div class="frame__middle">
       <div class="frame__top"></div>
       <div class="frame__content_container"><Nuxt class="frame__content"/></div>
-      <div class="frame__bottom"></div>
+      <div class="frame__bottom">
+        <div class="frame__horizontal-container">
+          <Dpad />
+          <ControlButtons />
+        </div>
+      </div>
     </div>
     <div class="frame__right">
       <div class="frame__vertical-container">
@@ -61,7 +66,6 @@
 .frame__content_container {
   flex-grow: 1;
   background-color: @frame_color;
-  // remove Nuxt built-in style
 }
 
 .frame__content {
@@ -86,6 +90,18 @@
   align-items: center;
   justify-content: center;
   @media screen and (max-width: @mobile_max_width) {
+    display: none;
+  }
+}
+
+.frame__horizontal-container {
+  width: 100%;
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  @media screen and (min-width: @mobile_max_width) {
     display: none;
   }
 }

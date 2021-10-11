@@ -1,8 +1,8 @@
 <template>
   <div class="control-buttons">
     <div class="control-buttons__container">
-      <div class="control-buttons__a">A</div>
-      <div class="control-buttons__b">B</div>
+      <div class="control-buttons__a"></div>
+      <div class="control-buttons__b"></div>
     </div>
   </div>
 </template>
@@ -40,11 +40,16 @@
   order: 2;
   margin-left: 16px;
   margin-bottom: 32px;
+  &::after {
+    content: 'A';
+  }
 }
 
 .control-buttons__b {
   .control-buttons__base();
   order: 1;
+  &::after {
+    content: 'B';
+  }
 }
-
 </style>
