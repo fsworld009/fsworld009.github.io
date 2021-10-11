@@ -5,6 +5,7 @@ module.exports = {
     node: true
   },
   parser: 'vue-eslint-parser',
+  // https://github.com/yoyoys/eslint-config-vue-typescript-prettier-airbnb/blob/master/index.js
   extends: [
     'plugin:vue/essential',
     '@vue/prettier',
