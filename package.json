@@ -18,8 +18,10 @@
     "@babel/eslint-parser": "^7.14.7",
     "@nuxt/types": "^2.15.7",
     "@nuxt/typescript-build": "^2.1.0",
+    "@nuxtjs/composition-api": "0.29.2",
     "@nuxtjs/eslint-config-typescript": "^6.0.1",
     "@nuxtjs/eslint-module": "^3.0.2",
+    "@pinia/nuxt": "0.0.3",
     "@vue/eslint-config-airbnb": "5.3.0",
     "@vue/eslint-config-prettier": "6.0.0",
     "@vue/eslint-config-typescript": "7.0.0",
@@ -27,6 +29,7 @@
     "eslint-config-airbnb-base-typescript": "1.0.0",
     "eslint-plugin-nuxt": "^2.0.0",
     "eslint-plugin-vue": "^7.12.1",
+    "pinia": "2.0.0-rc.12",
     "prettier": "2.4.1",
     "vue-eslint-parser": "7.11.0"
   }
