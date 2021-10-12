@@ -1,52 +1,27 @@
 <template>
-  <div class="index">
-    <div class="index__row">
-      <img src="~assets/protrait.png" />
-      <div class="index__title">Andy Lee (fsworld009)</div>
+  <Title>
+    <div class="presskey">
+      <NuxtLink to="/menu">Press Any Key</NuxtLink>
     </div>
-    <div class="index__presskey">
-      <a href="javascript:void()">Press Any Key</a>
-    </div>
-  </div>
+  </Title>
 </template>
 
 <style lang="less">
 @import '~/assets/variables.less';
-
-.index {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.index__row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.index__title {
-  margin-left: 8px;
-  font-size: @text_size_title;
-  color: @text_color_green;
-  text-align: center;
-}
-
-.index__presskey {
+.presskey {
   font-size: @text_size_header;
   animation: presskey 3s 1s infinite;
 }
 
 @keyframes presskey {
   0% {
-    opacity: 1;
+    color: @text_color_white;
   }
   50% {
-    opacity: 0;
+    color: @bg_color;
   }
   100% {
-    opacity: 1;
+    color: @text_color_white;
   }
 }
 </style>
