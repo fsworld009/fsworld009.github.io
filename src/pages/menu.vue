@@ -4,7 +4,7 @@
       <NuxtLink to="/about">About Me</NuxtLink>
       <NuxtLink to="/projects/sample">Projects</NuxtLink>
       <NuxtLink to="/contact">Contact</NuxtLink>
-      <a href="/blog/" target="_blank">Blog</a>
+      <a href="https://fsworld009.github.io/blog/" target="_blank">Blog</a>
     </div>
   </Title>
 </template>
