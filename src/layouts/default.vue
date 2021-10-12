@@ -10,7 +10,9 @@
       <div class="frame__content_box">
         <div class="frame__content_border">
           <Score class="frame__score" />
-          <Nuxt class="frame__content" />
+          <div class="frame__scroll">
+            <Nuxt class="frame__content" />
+          </div>
         </div>
       </div>
       <div class="frame__bottom">
@@ -73,8 +75,12 @@
 }
 
 .frame__content_box {
-  flex: 0 1 100%;
+  flex-shrink: 0;
+  flex-grow: 1;
   background-color: @frame_color;
+  // Give it a very small height, and extend to the rest of the screen
+  // height with flex-grow
+  height: 1px;
 }
 
 .frame__content_border {
@@ -92,8 +98,14 @@
   margin-bottom: 8px;
 }
 
-.frame__content {
+.frame__scroll {
+  overflow-y: auto;
+  height: 1px;
   flex-grow: 1;
+}
+
+.frame__content {
+  height: 100%;
 }
 
 .frame__bottom {
