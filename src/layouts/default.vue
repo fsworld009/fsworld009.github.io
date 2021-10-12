@@ -1,22 +1,27 @@
 <template>
   <div class="frame">
     <div class="frame__left">
-      <div class="frame__vertical-container">
+      <div class="frame__vertical_container">
         <Dpad />
       </div>
     </div>
     <div class="frame__middle">
       <div class="frame__top"></div>
-      <div class="frame__content_container"><Nuxt class="frame__content"/></div>
+      <div class="frame__content_box">
+        <div class="frame__content_border">
+          <Score class="frame__score" />
+          <Nuxt class="frame__content" />
+        </div>
+      </div>
       <div class="frame__bottom">
-        <div class="frame__horizontal-container">
+        <div class="frame__horizontal_container">
           <Dpad />
           <ControlButtons />
         </div>
       </div>
     </div>
     <div class="frame__right">
-      <div class="frame__vertical-container">
+      <div class="frame__vertical_container">
         <ControlButtons />
       </div>
     </div>
@@ -24,6 +29,8 @@
 </template>
 
 <style lang="less">
+@import '~/assets/variables.less';
+
 @frame_color: #18c5cb;
 @frame_size_with_buttons: 160px;
 @frame_top_height: 16px;
@@ -63,15 +70,28 @@
   flex: 0 0 @frame_top_height;
 }
 
-.frame__content_container {
-  flex-grow: 1;
+.frame__content_box {
+  flex: 0 1 100%;
   background-color: @frame_color;
 }
 
-.frame__content {
-  min-height: 100% !important; // important is required to override nuxt default
+.frame__content_border {
+  height: 100%;
+  background-color: @bg_color;
   border-radius: 16px;
-  padding: 8px !important;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+}
+
+.frame__score {
+  flex-grow: 0;
+  flex-shrink: 0;
+  margin-bottom: 8px;
+}
+
+.frame__content {
+  flex-grow: 1;
 }
 
 .frame__bottom {
@@ -82,7 +102,7 @@
   }
 }
 
-.frame__vertical-container {
+.frame__vertical_container {
   height: 100%;
   padding: 5px;
   display: flex;
@@ -94,7 +114,7 @@
   }
 }
 
-.frame__horizontal-container {
+.frame__horizontal_container {
   width: 100%;
   height: 100%;
   padding: 5px;

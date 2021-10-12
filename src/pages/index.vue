@@ -1,12 +1,12 @@
 <template>
-  <div class="main"><Tutorial /></div>
+  <div><img src="~assets/protrait.png" /></div>
 </template>
 
 <style lang="less">
-.main {
-  background-color: black;
-  color: white;
-}
+// .main {
+//   background-color: black;
+//   color: white;
+// }
 </style>
 
 <script lang="ts">

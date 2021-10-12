@@ -8,6 +8,8 @@
 </template>
 
 <style lang="less">
+@import '~/assets/variables.less';
+
 @button_radius: 48px;
 @button_text_size: 16px;
 
@@ -33,6 +35,7 @@
   text-align: center;
   line-height: @button_radius;
   font-size: @button_text_size;
+  color: @bg_color;
 }
 
 .control-buttons__a {
