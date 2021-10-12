@@ -99,7 +99,7 @@
 }
 
 .frame__scroll {
-  padding-top: 16px;
+  margin-top: 16px;
   overflow-y: auto;
   height: 1px;
   flex-grow: 1;
