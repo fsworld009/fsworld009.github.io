@@ -1,7 +1,7 @@
 <template>
   <Title>
     <div class="presskey">
-      <NuxtLink to="/menu">Press Any Key</NuxtLink>
+      <NuxtLink to="/menu/">Press Any Key</NuxtLink>
     </div>
   </Title>
 </template>

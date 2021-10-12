@@ -24,12 +24,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @media screen and (max-width: @mobile_view_width) {
+    // allow title text to be wrapped in mobile view
+    flex-wrap: wrap;
+  }
 }
 
 .title__text {
   margin-left: 8px;
   font-size: @text_size_title;
   color: @text_color_green;
+  flex-shrink: 1;
+  flex-grow: 1;
   text-align: center;
 }
 </style>

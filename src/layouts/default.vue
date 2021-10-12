@@ -37,8 +37,9 @@
 @frame_bottom_height: 32px;
 
 @frame_size_small: 5px;
+@frame_content_min_width: 360px;
 
-@mobile_max_width: 980px;
+@mobile_max_width: @frame_size_with_buttons * 2 + @mobile_view_width;
 
 .frame {
   display: flex;
@@ -63,6 +64,7 @@
   flex-grow: 1;
   flex-direction: column;
   height: 100vh;
+  min-width: @frame_content_min_width;
 }
 
 .frame__top {
