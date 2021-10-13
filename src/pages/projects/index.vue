@@ -10,7 +10,7 @@
       <div class="project__date">{{ project.date }}</div>
       <div class="project__container">
         <img class="project__thumbnail" :src="`/screenshots/${project.id}/thumbnail.png`" />
-        <div class="project__desc">{{ project.description }}</div>
+        <div class="project__brief">{{ project.brief }}</div>
       </div>
       <div class="project__tags">
         <span class="project__tag" v-for="tag in project.tags" :key="tag">{{ tag }}</span>
@@ -48,7 +48,6 @@
   margin-top: @spacing_normal;
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
 }
 
 .project__thumbnail {
@@ -58,7 +57,7 @@
   margin-bottom: @spacing_small;
 }
 
-.project__desc {
+.project__brief {
   flex-grow: 1;
 }
 
@@ -70,6 +69,7 @@
 .project__tag {
   font-size: @text_size_small;
   margin-right: 8px;
+  line-height: 24px;
   background-color: @text_color_green;
   color: @bg_color;
   padding: 4px;
@@ -89,7 +89,7 @@ import projectListJson from '../../projects/index.json';
 interface Project {
   id: string;
   title: string;
-  description: string;
+  brief: string;
   tags: string[];
   date: string;
 }
