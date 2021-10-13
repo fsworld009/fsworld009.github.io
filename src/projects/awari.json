@@ -1,0 +1,25 @@
+{
+  "title":"Awari",
+  "description":"A GUI Awari game that contains an AI player based on my own evaluation function and a debug mode which you can adjust game state for testing the AI player.",
+  "achievements":[
+    "Implemented the game in MFC",
+    "Designed my own strategy for winning the game",
+    "Implemented my strategy as evaluation function for the AI player",
+    "Abstracted the game into state representations for computing next move and debug mode"
+  ],
+  "screenshots":[
+    "Game screenshot",
+    "Debug mode",
+    "Evaluation Function (Mandarian)"
+  ],
+  "links":[
+    {
+      "name":"Download the game",
+      "url":"https://github.com/fsworld009/Awari/releases"
+    },
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/Awari"
+    }
+  ]
+}

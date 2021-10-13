@@ -1,0 +1,22 @@
+{
+  "title": "Small widgets",
+  "description":"Some web pages for practicing HTML5, CSS3 and javascript, including multiple versions of analog clock and star rating.",
+  "achievements": [
+    "Drew an analog clock with pure DOM elements and css",
+    "Designed a calculator without using \"eval()\" method"
+  ],
+  "screenshots": [
+    "analog clock",
+    "calculator"
+  ],
+  "links":[
+    {
+      "name":"Project page",
+      "url":"http://fsworld009.github.io/smallwidgets2014/"
+    },
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/smallwidgets2014"
+    }
+  ]
+}

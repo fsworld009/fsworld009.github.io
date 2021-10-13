@@ -1,0 +1,15 @@
+{
+  "id": "myportfolio2014",
+  "title": "My Portfolio (2014)",
+  "description": "This website serves as my self-introduction to other people. It can be viewed on desktop, tablet or mobile devices. I also abstract project listings and descriptions into JSON files so that I can update the site easily in the future.",
+  "achievements":[
+    "Use Twitter Bootstrap for responsive web design",
+    "Save project descriptions and links in JSON, and retrive them via jQuery AJAX methods when user clicks the project detail link"
+  ],
+  "screenshots": [
+    "support mobile devices"
+  ],
+  "links": [
+    {"name":"Project GitHub", "url":"https://github.com/fsworld009/fsworld009.github.io_2014"}
+  ]
+}

@@ -8,16 +8,16 @@
         {{ achi }}
       </li>
     </ul>
-    <h2 class="project__header">SCREENSHOTS</h2>
+    <h2 v-if="project.screenshots.length" class="project__header">SCREENSHOTS</h2>
     <p v-for="(s, index) in project.screenshots" :key="index">
       <img
         class="project__screenshot"
         :src="`/screenshots/${id}/${String(index + 1).padStart(3, '0')}.png`"
-        :alt="s" />
+        :alt="s"/>
       <br />
       {{ s }}
     </p>
-    <h2 class="project__header">LINKS</h2>
+    <h2 v-if="project.links.length" class="project__header">LINKS</h2>
     <h4 class="project__link_container" v-for="(l, index) in project.links" :key="index">
       <a class="project__link" :href="l.url" target="_blank">{{ l.name }}</a>
     </h4>

@@ -1,0 +1,24 @@
+{
+  "title":"(Team) Xiangqi (Chinese Chess)",
+  "description":"Chinese Chess game written in MFC with full color gameboard UI.",
+  "achievements":[
+    "Feature: Timers for each turn",
+    "Feature: Output log for each turn",
+    "Feature: Save game log to file after a game is end",
+    "Feature: Replay a game by loading a game log"
+  ],
+  "screenshots":[
+    "Game screenshot",
+    "Flow chart"
+  ],
+  "links":[
+    {
+      "name":"Download the game",
+      "url":"https://github.com/fsworld009/Xiangqi/releases"
+    },
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/Xiangqi"
+    }
+  ]
+}

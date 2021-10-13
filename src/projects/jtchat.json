@@ -1,0 +1,24 @@
+{
+  "title":"JTChat",
+  "description":"An Internet Relay Chat (IRC) program designed for users of a popular video streaming website, Twitch.tv.",
+  "achievements":[
+    "Implemented a simple IRC bot by Java TCP socket packages.",
+    "Learned to write a GUI program with JAVA Swing.",
+    "Analyzed and handled customized IRC control messages made by Twitch."
+  ],
+  "screenshots":[
+    "configuration dialog",
+    "simulate \"delete banned messages\" functionality on Twitch.tv",
+    "has ability to parse Twitch-customized messages and display nickname colors"
+  ],
+  "links":[
+    {
+      "name":"Latest binary",
+      "url":"https://mega.co.nz/#F!udtRiARY!EyG9WCrm8FtbJwLBKbS94A"
+    },
+    {
+      "name":"Source Code",
+      "url":"https://github.com/fsworld009/JTChat"
+    }
+  ]
+}

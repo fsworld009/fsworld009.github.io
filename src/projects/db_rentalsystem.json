@@ -1,0 +1,17 @@
+{
+  "title":"(Team) Spaces and Equipments Rental Management System",
+  "description":"A relational database design and implementation for renting spaces and equipments in the university.",
+  "achievements":[
+    "Designed an entity-relationship (ER) model from real life example",
+    "Converted the ER model to a relational model",
+    "Wrote SQL queries with Oracle SQLPlus",
+    "Implemented simple user interface to interact with Database with php"
+  ],
+  "screenshots":[
+    "ER Model",
+    "Converted relational model",
+    "Example SQL usages"
+  ],
+  "links":[
+  ]
+}

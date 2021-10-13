@@ -1,0 +1,22 @@
+{
+  "title":"Block Attack",
+  "description":"A mini game written in python and pygame",
+  "achievements":[
+    "Implemented a keyboard controlled game with python 2 and pygame",
+    "Exported windows binary to share the game to people without python installation"
+  ],
+  "screenshots":[
+    "Use arrow keys to control",
+    "Game over if the player is crushed by 2 or more blocks."
+  ],
+  "links":[
+    {
+      "name":"Latest binary for Windows",
+      "url":"https://mega.co.nz/#F!ecc0WC7R!G-tLKVXBPiIYk4HdMIKPdQ"
+    },
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/BlockAttack"
+    }
+  ]
+}

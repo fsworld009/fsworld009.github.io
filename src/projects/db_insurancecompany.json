@@ -1,0 +1,15 @@
+{
+  "title":"(Team) Insurance Management Database System",
+  "description":"A relational database for Insurance companies and agencies.",
+  "achievements":[
+    "Designed an enhanced entity-relationship (EER) model from requirement documents",
+    "Converted the EER model to a relational model",
+    "Performed SQL queries with Oracle SQLPlus on a Unix machine"
+  ],
+  "screenshots":[
+    "EER model design",
+    "Relational model design",
+    "Dependency diagram"
+  ],
+  "links":[]
+}

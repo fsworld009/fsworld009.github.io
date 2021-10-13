@@ -1,0 +1,22 @@
+{
+  "title":"(Team) Distributed Mutual Exclusion Algorithm",
+  "description":"A quorum-based and token-based mutual exclusion algorithm in a distributed system.",
+  "achievements":[
+    "Applied TCP Socket programming in C on Linux",
+    "Practiced Linux commands and tools",
+    "Used JIRA for project management"
+  ],
+  "screenshots": [
+    "Our algorithm's performance compare to Maekawa's algorithm"
+  ],
+  "links": [
+    {
+      "name":"Source Code",
+      "url":"https://github.com/fsworld009/AOSproject"
+    },
+    {
+      "name":"Source Code (Final submission)",
+      "url":"https://github.com/fsworld009/AOSproject-submission"
+    }
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "title":"(Team Project) SIP User Agent Remote Controller",
+  "description": "A Java Applet that can remotely control a SIP User Agent over the network to make a call or receive a call.",
+  "achievements": [
+    "Created a message-oriented protocol between a Java Applet and a Java program.",
+    "Modified Session Initiation Protocol (SIP) to meet project requirements.",
+    "Investigated an open source Java package MjSip"
+  ],
+  "screenshots": [
+    "architecture",
+    "http messages between Http server on Sip user agent and web browser",
+    "message protocol for calling from web browser",
+    "message protocol for calling from another Sip user agent",
+    "message protocol for closing a call",
+    "A sip user agent written in Java Swing and MjSip",
+    "Java Applet for users to remote control their sip user agent"
+  ],
+  "links": [
+    {
+      "name":"Source Code (Sip user agent)",
+      "url":"https://github.com/fsworld009/TSDproject-sipua"
+    },
+    {
+      "name":"Source Code (Webphone)",
+      "url":"https://github.com/fsworld009/TSDproject-webphone"
+    },
+    {
+      "name":"Source Code (Final Submission)",
+      "url":"https://github.com/fsworld009/TSDproject-submission"
+    },
+    {
+      "name": "MjSip",
+      "url": "http://www.mjsip.org"
+    }
+  ]
+}

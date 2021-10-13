@@ -1,0 +1,31 @@
+{
+  "id":"calculator2007",
+  "title":"Calculator (C++)",
+  "date":"Apr 2007",
+  "skills":[
+    "C++"
+  ],
+  "brief":"text based calculator in C++",
+  "description":"A calculator that can parse math expressions and do the computation",
+  "points":[
+    "Support operators: +-*/",
+    "Identify operator orders (handle *,/ prior to +,-)",
+    "Support minus numbers",
+    "Support parentheses in expression",
+    "Accept a space between numbers and operators in expression",
+    "Reject invalid expression"
+  ],
+  "screenshots":[
+    {
+      "caption":"Screenshot",
+      "width":669,
+      "height":438
+    }
+  ],
+  "links":[
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/Calculator_2007"
+    }
+  ]
+}

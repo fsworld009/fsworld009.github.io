@@ -1,0 +1,19 @@
+{
+  "title" : "My Portfolio (2017)",
+  "description": "My new homepage to demonstrate my Front-End development skill to people. The site is built with Vuejs and focus on responsive design and the ease to add new project sections.",
+  "achievements": [
+    "Used Vue.js to construct the website for cleaner code base",
+    "Utilized Responsive Design in Semantic UI",
+    "Plugged in lazy load images feature in Semantic UI",
+    "Generated site data from JSON files, the website can be updated without changing HTML or javascript",
+    "Used webpack for development and final assets deployment"
+  ],
+  "screenshots": [
+    "Responsive design (mobile)",
+    "Responsive design (tablet)",
+    "Responsive design (wide screen)"
+  ],
+  "links": [
+    {"name":"Project GitHub", "url":"https://github.com/fsworld009/fsworld009.github.io/tree/work_branch"}
+  ]
+}

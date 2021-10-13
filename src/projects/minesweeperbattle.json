@@ -1,0 +1,26 @@
+{
+  "title":"(Team) Minesweeper Battle",
+  "description":"This game is a recreation of Minesweeper Flags game in MSN with web page and javascript. Two players against each other and whoever finds the most mines wins the game.",
+  "achievements":[
+    "Used javascript to generate game board and clickable squares",
+    "Used CSS to position the game layout",
+    "Wrote the game with VanillaJS only (no any 3rd-party plugin)"
+  ],
+  "screenshots":[
+    "Game screenshot"
+  ],
+  "links":[
+    {
+      "name":"Play the game",
+      "url":"https://fsworld009.github.io/MinesweeperBattle/minesweeper.html"
+    },
+    {
+      "name":"Play the game (IE6)",
+      "url":"https://fsworld009.github.io/MinesweeperBattle/minesweeper_IE6.html"
+    },
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/MinesweeperBattle"
+    }
+  ]
+}

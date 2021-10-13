@@ -1,0 +1,26 @@
+{
+  "title":"(Team) Java Multi Language File Mover and Renamer",
+  "description":"A batch file renamer written in Java Swing with different rename options.",
+  "achievements":[
+    "Batch rename files and folders with [Prefix][serial numbers] format",
+    "Batch search and replace certain string in file and folder names",
+    "Batch move files and folders to another folder",
+    "Multi language support in UI"
+  ],
+  "screenshots":[
+    "Main UI",
+    "A successful batch rename task",
+    "Log window",
+    "Multi language support",
+    "Architecture",
+    "Layout breakdown",
+    "Flow chart",
+    "UML"
+  ],
+  "links":[
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/JavaFileRenamer"
+    }
+  ]
+}

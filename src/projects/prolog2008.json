@@ -1,0 +1,16 @@
+{
+  "title":"Prolog Program Contest 2008",
+  "description":"Implementation of problems from Prolog Program Contest 2008 with SWI-Prolog. Outputs are available in project GitHub page",
+  "achievements":[
+    "Solved all problems with knowledge learned from Prolog class"
+  ],
+  "screenshots":[
+    "Output of chocolate.pl"
+  ],
+  "links":[
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/PrologProgrammingContest2008"
+    }
+  ]
+}

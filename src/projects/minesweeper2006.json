@@ -1,0 +1,22 @@
+{
+  "title":"Minesweeper (C++)",
+  "description":"A Minesweeper game written in C++ that is similiar to Minesweeper game in Windows XP.",
+  "achievements":[
+    "Implemented flag and expand feature",
+    "Offered game customization options",
+    "Utilized 3rd party cpp file to provide screen refresh functionality"
+  ],
+  "screenshots":[
+    "Game screenshot"
+  ],
+  "links":[
+    {
+      "name":"Download the game",
+      "url":"https://github.com/fsworld009/Minesweeper_2006/releases"
+    },
+    {
+      "name":"Project GitHub",
+      "url":"https://github.com/fsworld009/Minesweeper_2006"
+    }
+  ]
+}
