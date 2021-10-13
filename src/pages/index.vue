@@ -1,9 +1,7 @@
 <template>
   <!-- workaround: generated index doesn't contain frame__content from layout -->
   <Title class="frame__content">
-    <div class="presskey">
-      <NuxtLink to="/menu">Press Any Button</NuxtLink>
-    </div>
+    <NuxtLink class="presskey" to="/menu">Press Any Button</NuxtLink>
   </Title>
 </template>
 
@@ -12,6 +10,8 @@
 .presskey {
   font-size: @text_size_header;
   animation: presskey 3s 1s infinite;
+  display: block;
+  text-align: center;
 }
 
 @keyframes presskey {

@@ -11,7 +11,7 @@ const CLASS_PREFIX = 'button-';
 const PRESSED_CLASS = `${CLASS_PREFIX}pressed`;
 const SELECTED_CLASS = 'link-selected';
 const buttons = [BUTTON.UP, BUTTON.DOWN, BUTTON.LEFT, BUTTON.RIGHT, BUTTON.A, BUTTON.B];
-let keypressed = false;
+let buttonIsPressed = false;
 
 let buttonElements: NodeListOf<Element>;
 let initCalled = false;
@@ -119,6 +119,10 @@ function pressButton(button: BUTTON) {
 }
 
 function onMouseDown(event: Event) {
+  if (buttonIsPressed) {
+    return;
+  }
+  buttonIsPressed = true;
   const elem: Element = event.target as Element;
   elem.classList.add(PRESSED_CLASS);
   const button = elem.classList[1].replace(CLASS_PREFIX, '');
@@ -126,6 +130,7 @@ function onMouseDown(event: Event) {
 }
 
 function onMouseUp(event: Event) {
+  buttonIsPressed = false;
   const elem: Element = event.target as Element;
   elem.classList.remove(PRESSED_CLASS);
 }
@@ -154,13 +159,13 @@ function getButton(key: string): BUTTON | null {
 }
 
 function onKeyboardDown(event: KeyboardEvent) {
-  if (keypressed) {
+  if (buttonIsPressed) {
     return;
   }
   const button = getButton(event.key);
   if (button !== null) {
     event.preventDefault();
-    keypressed = true;
+    buttonIsPressed = true;
     const elems = document.querySelectorAll(`.${CLASS_PREFIX}${button}`);
     elems.forEach((elem) => elem.classList.add(PRESSED_CLASS));
     pressButton(button);
@@ -170,7 +175,7 @@ function onKeyboardDown(event: KeyboardEvent) {
 function onKeyboardUp(event: KeyboardEvent) {
   const button = getButton(event.key);
   if (button !== null) {
-    keypressed = false;
+    buttonIsPressed = false;
     const elems = document.querySelectorAll(`.${CLASS_PREFIX}${button}`);
     elems.forEach((elem) => elem.classList.remove(PRESSED_CLASS));
   }
