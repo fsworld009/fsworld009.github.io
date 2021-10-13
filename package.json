@@ -6,7 +6,7 @@
     "dev": "nuxt",
     "build_projects": "bash scripts/build_projects.sh",
     "build": "npm run build_projects && nuxt generate",
-    "test_dist": "npx http-server dist -p 3000",
+    "test_dist": "npx http-server dist -p 4000",
     "deploy": "bash scripts/deploy.sh",
     "lint:js": "eslint --ext \".js,.vue\" --ignore-path .gitignore .",
     "lint": "npm run lint:js"

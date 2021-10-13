@@ -7,6 +7,16 @@
 
 ## Development
 
+### Dev Server
+
+```bash
+npm bun build_projects
+npm run dev
+```
+
+Open dev server at https://localhost:3000
+Has hot reload support
+
 
 ### Add a new project
 
@@ -23,8 +33,10 @@
 ```bash
 npm run build
 # Test the build
-npm run test_build
+npm run test_dist
 ```
+
+Open https://localhost:4000 to verify the build
 
 ## Deploy
 

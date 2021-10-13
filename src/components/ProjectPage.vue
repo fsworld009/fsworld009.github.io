@@ -55,6 +55,7 @@
 }
 .project__link {
   color: @text_color_blue;
+  display: block;
 }
 
 .project__title {

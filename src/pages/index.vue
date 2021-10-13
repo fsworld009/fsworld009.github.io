@@ -1,5 +1,6 @@
 <template>
-  <Title>
+  <!-- workaround: generated index doesn't contain frame__content from layout -->
+  <Title class="frame__content">
     <div class="presskey">
       <NuxtLink to="/menu">Press Any Key</NuxtLink>
     </div>
