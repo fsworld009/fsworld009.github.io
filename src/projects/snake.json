@@ -1,0 +1,18 @@
+{
+  "title": "Snake",
+  "description": "A Snake game made with RPG Maker MV. This is a learning project to get familiar with RPG Maker MV's javascript engine",
+  "achievements": [
+    "Implemented snake with additional obstacles",
+    "Wrote the game mostly in js script and not much with the built-in editor",
+    "Customized build script to minimize js scripts for web deployments"
+  ],
+  "screenshots": [
+    "Title",
+    "In Game",
+    "Game over and final score"
+  ],
+  "links": [
+    {"name":"Play the game", "url":"https://fsworld009.gitlab.io/rmmv-snake/"},
+    {"name":"Project GitHub", "url":"https://github.com/fsworld009/rmmv-snake/"}
+  ]
+}

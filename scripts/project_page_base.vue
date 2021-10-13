@@ -1,16 +1,16 @@
 <!-- eslint-disable -->
 <template>
-  <ProjectPage :markdown="markdown" />
+  <ProjectPage :project="project" id="##PROJECT_ID##" />
 </template>
 
 <script lang="js">
 import Vue from 'vue';
-import markdown from '../../projects/##PROJECT_ID##.md';
+import project from '../../projects/##PROJECT_ID##.json';
 
 export default Vue.extend({
   data() {
     return {
-      markdown,
+      project,
     };
   },
 });

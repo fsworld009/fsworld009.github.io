@@ -2,7 +2,7 @@ module.exports = {
   root: true,
   env: {
     browser: true,
-    node: true
+    node: true,
   },
   parser: 'vue-eslint-parser',
   // https://github.com/yoyoys/eslint-config-vue-typescript-prettier-airbnb/blob/master/index.js
@@ -18,8 +18,7 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: ['./tsconfig.eslint.json'],
   },
-  plugins: [
-  ],
+  plugins: [],
   // add your custom rules here
   rules: {
     // 'import/no-extraneous-dependencies': 'off',
@@ -31,5 +30,5 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
-  }
-}
+  },
+};

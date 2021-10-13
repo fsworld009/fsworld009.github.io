@@ -64,6 +64,7 @@
 
 .project__tags {
   margin-top: @spacing_normal;
+  text-align: left;
 }
 
 .project__tag {

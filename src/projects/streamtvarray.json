@@ -1,0 +1,22 @@
+{
+  "title": "Stream TV Array",
+  "description": "A utility web page to allow you to watch multiple streams on one screen, with ability to show and hide chatroom at will.",
+  "achievements": [
+    "Customize array width and height",
+    "Toggle chat box visibility",
+    "Set transparency on chat box",
+    "Confirm popup before unload the page to prevent from accidentally closing or leaving the page",
+    "Automatically load opened streams on page refresh as long as the tab is not closed"
+  ],
+  "screenshots": [
+    "2x2 Array Setting",
+    "1x3 Array Setting",
+    "Main Option Screen",
+    "Stream Option Screen]",
+    "Chat will become full visible on mouse hover"
+  ],
+  "links":[
+    {"name":"Project page", "url":"https://fsworld009.github.io/StreamTvArray/"},
+    {"name":"Project GitHub", "url":"https://github.com/fsworld009/StreamTvArray/"}
+  ]
+}
