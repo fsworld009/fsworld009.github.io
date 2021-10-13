@@ -36,6 +36,9 @@
   line-height: @button_radius;
   font-size: @button_text_size;
   color: @bg_color;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .control-buttons__a {

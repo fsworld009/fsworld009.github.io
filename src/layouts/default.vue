@@ -141,3 +141,21 @@
   }
 }
 </style>
+
+<script lang="ts">
+import Vue from 'vue';
+import { onMounted, useRoute } from '@nuxtjs/composition-api';
+import initController from '../assets/controller';
+
+export default Vue.extend({
+  setup(props, context) {
+    onMounted(() => {
+      // This is only executed on client rendering
+      console.log('this', context);
+      const route = useRoute();
+      console.log('called322', route);
+      initController(route);
+    });
+  },
+});
+</script>

@@ -25,6 +25,9 @@
   background-color: @button_color;
   position: absolute;
   top: @dpad_adjacent_length - (@dpad_height / 2);
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .dpad__right {
@@ -38,6 +41,9 @@
   left: @dpad_width;
   background-color: @button_color;
   position: absolute;
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .dpad__down {
