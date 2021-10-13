@@ -90,3 +90,6 @@ sw.*
 *.swp
 
 .vscode
+
+src/pages/projects/*.vue
+!src/pages/projects/index.vue

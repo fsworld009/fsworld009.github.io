@@ -5,7 +5,7 @@
 
 <script lang="js">
 import Vue from 'vue';
-import markdown from '../../projects/$PROJECT_ID.md';
+import markdown from '../../projects/##PROJECT_ID##.md';
 
 export default Vue.extend({
   data() {
