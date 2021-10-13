@@ -1,8 +1,8 @@
 <template>
   <div class="control-buttons">
     <div class="control-buttons__container">
-      <div class="control-buttons__a"></div>
-      <div class="control-buttons__b"></div>
+      <div class="control-buttons__a button-A"></div>
+      <div class="control-buttons__b button-B"></div>
     </div>
   </div>
 </template>

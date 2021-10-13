@@ -1,9 +1,9 @@
 <template>
   <div class="dpad">
-    <div class="dpad__left"></div>
-    <div class="dpad__right"></div>
-    <div class="dpad__up"></div>
-    <div class="dpad__down"></div>
+    <div class="dpad__left button-LEFT"></div>
+    <div class="dpad__right button-RIGHT"></div>
+    <div class="dpad__up button-UP"></div>
+    <div class="dpad__down button-DOWN"></div>
   </div>
 </template>
 
