@@ -1,5 +1,5 @@
 <template>
-  <NuxtLink class="back" to="/menu"><FaIcon icon="arrow-left" /> Back</NuxtLink>
+  <NuxtLink class="back" :to="to"><FaIcon icon="arrow-left" /> Back</NuxtLink>
 </template>
 
 <style lang="less">
@@ -9,3 +9,15 @@
   font-size: @text_size_large;
 }
 </style>
+
+<script lang="ts">
+import Vue from 'vue';
+
+export default Vue.extend({
+  props: {
+    to: {
+      default: '/menu',
+    },
+  },
+});
+</script>

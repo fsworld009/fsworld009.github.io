@@ -33,12 +33,12 @@
 }
 
 .contact__link {
-  margin-top: 12px;
+  margin-top: @spacing_small;
   font-size: @text_size_normal;
   width: @text_size_normal * 11;
 }
 
 .contact__back {
-  margin-top: 24;
+  margin-top: @spacing_large;
 }
 </style>

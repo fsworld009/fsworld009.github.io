@@ -2,17 +2,13 @@
   <div class="project">
     <div class="project__content" v-html="markdown"></div>
     <div class="project__back">
-      <Back />
+      <Back to="/projects" />
     </div>
   </div>
 </template>
 
 <style lang="less">
 @import '~/assets/variables.less';
-
-.project {
-  // max-width: 250px;
-}
 
 .project__content {
   text-align: center;

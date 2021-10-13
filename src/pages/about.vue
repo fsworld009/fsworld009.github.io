@@ -39,6 +39,6 @@
 .about__headline {
   font-size: @text_size_large;
   color: @text_color_blue;
-  margin-top: 32px;
+  margin-top: @spacing_large;
 }
 </style>

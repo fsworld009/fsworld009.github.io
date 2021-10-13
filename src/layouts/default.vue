@@ -119,7 +119,7 @@
 
 .frame__vertical_container {
   height: 100%;
-  padding: 5px;
+  padding: 4px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -132,7 +132,7 @@
 .frame__horizontal_container {
   width: 100%;
   height: 100%;
-  padding: 5px;
+  padding: 4px;
   display: flex;
   align-items: center;
   justify-content: space-around;

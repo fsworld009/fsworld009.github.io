@@ -31,7 +31,7 @@
 }
 
 .title__text {
-  margin-left: 8px;
+  margin-left: @spacing_small;
   font-size: @text_size_title;
   color: @text_color_green;
   flex-shrink: 1;

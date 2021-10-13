@@ -5,7 +5,7 @@
 
 <script lang="js">
 import Vue from 'vue';
-import markdown from '../../project_markdowns/snake.md';
+import markdown from '../../projects/snake.md';
 
 export default Vue.extend({
   data() {
