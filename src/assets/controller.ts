@@ -8,15 +8,86 @@ enum BUTTON {
 }
 const CLASS_PREFIX = 'button-';
 const PRESSED_CLASS = `${CLASS_PREFIX}pressed`;
+const SELECTED_CLASS = 'link-selected';
 const buttons = [BUTTON.UP, BUTTON.DOWN, BUTTON.LEFT, BUTTON.RIGHT, BUTTON.A, BUTTON.B];
+let keypressed = false;
 
 let buttonElements: NodeListOf<Element>;
-let routeRef;
-let events = [];
 let initCalled = false;
 
+function scrollToElem(elem: HTMLElement) {
+  const scroller = document.querySelector('.frame__scroll') as HTMLElement;
+  scroller.scrollTo(0, elem.offsetTop - 120);
+}
+
+function scroll(offset: number) {
+  const scroller = document.querySelector('.frame__scroll') as HTMLElement;
+  scroller.scrollTo(0, scroller.scrollTop + offset);
+}
+
+function selectLink(next: boolean) {
+  const links = document.querySelectorAll('a');
+  if (links.length <= 0) {
+    return;
+  }
+
+  let nextIndex;
+  for (let index = 0; index < links.length; index += 1) {
+    // console.log('linkElem', linkElem);
+    const linkElem = links[index];
+    if (linkElem.classList.contains(SELECTED_CLASS)) {
+      if (next) {
+        nextIndex = index + 1;
+        if (nextIndex >= links.length) {
+          nextIndex = 0;
+        }
+      } else {
+        nextIndex = index - 1;
+        if (nextIndex < 0) {
+          nextIndex = links.length - 1;
+        }
+      }
+      links[nextIndex].classList.add(SELECTED_CLASS);
+      linkElem.classList.remove(SELECTED_CLASS);
+      scrollToElem(links[nextIndex]);
+      return;
+    }
+  }
+  // no existed selection, select the first or last one
+  nextIndex = next ? 0 : links.length - 1;
+  links[nextIndex].classList.add(SELECTED_CLASS);
+  scrollToElem(links[nextIndex]);
+}
+
+/* eslint-disable no-case-declarations */
 function pressButton(button: BUTTON) {
-  console.log('process button', button);
+  switch (button) {
+    case BUTTON.B:
+      const backLink = document.querySelector('.back');
+      if (backLink) {
+        (backLink as HTMLElement).click();
+      }
+      break;
+    case BUTTON.A:
+      const selectedLink = document.querySelector(`.${SELECTED_CLASS}`);
+      if (selectedLink) {
+        (selectedLink as HTMLElement).click();
+      }
+      break;
+    case BUTTON.DOWN:
+      selectLink(true);
+      break;
+    case BUTTON.UP:
+      selectLink(false);
+      break;
+    case BUTTON.RIGHT:
+      scroll(200);
+      break;
+    case BUTTON.LEFT:
+      scroll(-200);
+      break;
+    default:
+  }
 }
 
 
@@ -56,8 +127,13 @@ function getButton(key: string): BUTTON | null {
 }
 
 function onKeyboardDown(event: KeyboardEvent) {
+  if (keypressed) {
+    return;
+  }
   const button = getButton(event.key);
   if (button !== null) {
+    event.preventDefault();
+    keypressed = true;
     const elems = document.querySelectorAll(`.${CLASS_PREFIX}${button}`);
     elems.forEach((elem) => elem.classList.add(PRESSED_CLASS));
     pressButton(button);
@@ -67,13 +143,14 @@ function onKeyboardDown(event: KeyboardEvent) {
 function onKeyboardUp(event: KeyboardEvent) {
   const button = getButton(event.key);
   if (button !== null) {
+    keypressed = false;
     const elems = document.querySelectorAll(`.${CLASS_PREFIX}${button}`);
     elems.forEach((elem) => elem.classList.remove(PRESSED_CLASS));
   }
 }
 
 export default function initController(route: unknown) {
-  routeRef = route;
+  // routeRef = route as VueRoute;
   if (initCalled) {
     // avoid re-init on hot reload
     console.log('skip2');
@@ -91,10 +168,6 @@ export default function initController(route: unknown) {
   });
   document.addEventListener('keydown', onKeyboardDown);
   document.addEventListener('keyup', onKeyboardUp);
-    
-
-
-  // document.addEventListener('keydown', onKeyDown);
+  // avoid calling init multiple times on Vue component hot reload
   initCalled = true;
-  console.log('initController called', routeRef);
 }

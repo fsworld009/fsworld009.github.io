@@ -7,6 +7,7 @@
       <a href="https://fsworld009.github.io/blog/" target="_blank">
         <FaIcon icon="pencil-square-o" /> Blog
       </a>
+      <Back to="/" />
     </div>
   </Title>
 </template>

@@ -4,12 +4,12 @@
     <p class="project__description">{{ project.description }}</p>
     <h2 class="project__header">ACHIEVEMENTS</h2>
     <ul class="project__achievements">
-      <li v-for="(achi, index) in project.achievements" :key="index">
+      <li v-for="(achi, index) in project.achievements" :key="`a${index}`">
         {{ achi }}
       </li>
     </ul>
     <h2 v-if="project.screenshots.length" class="project__header">SCREENSHOTS</h2>
-    <p v-for="(s, index) in project.screenshots" :key="index">
+    <p v-for="(s, index) in project.screenshots" :key="`s${index}`">
       <img
         class="project__screenshot"
         :src="`/screenshots/${id}/${String(index + 1).padStart(3, '0')}.png`"
@@ -18,7 +18,7 @@
       {{ s }}
     </p>
     <h2 v-if="project.links.length" class="project__header">LINKS</h2>
-    <h4 class="project__link_container" v-for="(l, index) in project.links" :key="index">
+    <h4 class="project__link_container" v-for="(l, index) in project.links" :key="`p${index}`">
       <a class="project__link" :href="l.url" target="_blank">{{ l.name }}</a>
     </h4>
     <div class="project__back">
