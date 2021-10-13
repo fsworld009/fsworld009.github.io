@@ -2,7 +2,7 @@
   <!-- workaround: generated index doesn't contain frame__content from layout -->
   <Title class="frame__content">
     <div class="presskey">
-      <NuxtLink to="/menu">Press Any Key</NuxtLink>
+      <NuxtLink to="/menu">Press Any Button</NuxtLink>
     </div>
   </Title>
 </template>
@@ -26,12 +26,3 @@
   }
 }
 </style>
-
-<script lang="ts">
-import Vue from 'vue'
-
-export default Vue.extend({})
-
-
-let a = 3;
-</script>

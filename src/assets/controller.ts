@@ -6,6 +6,7 @@ enum BUTTON {
   A = 'A',
   B = 'B',
 }
+let routeRef = { value: { fullPath: '' } };
 const CLASS_PREFIX = 'button-';
 const PRESSED_CLASS = `${CLASS_PREFIX}pressed`;
 const SELECTED_CLASS = 'link-selected';
@@ -14,6 +15,12 @@ let keypressed = false;
 
 let buttonElements: NodeListOf<Element>;
 let initCalled = false;
+
+interface VueRoute {
+  value: {
+    fullPath: string;
+  };
+}
 
 function scrollToElem(elem: HTMLElement) {
   const scroller = document.querySelector('.frame__scroll') as HTMLElement;
@@ -61,35 +68,55 @@ function selectLink(next: boolean) {
 
 /* eslint-disable no-case-declarations */
 function pressButton(button: BUTTON) {
-  switch (button) {
-    case BUTTON.B:
-      const backLink = document.querySelector('.back');
-      if (backLink) {
-        (backLink as HTMLElement).click();
-      }
-      break;
-    case BUTTON.A:
-      const selectedLink = document.querySelector(`.${SELECTED_CLASS}`);
-      if (selectedLink) {
-        (selectedLink as HTMLElement).click();
-      }
-      break;
-    case BUTTON.DOWN:
-      selectLink(true);
-      break;
-    case BUTTON.UP:
-      selectLink(false);
-      break;
-    case BUTTON.RIGHT:
-      scroll(200);
-      break;
-    case BUTTON.LEFT:
-      scroll(-200);
-      break;
-    default:
+  if (routeRef.value.fullPath === '/') {
+    (document.querySelector('a') as HTMLElement).click();
+  } else {
+    const isProjectDetailPage = /projects\/[a-z0-9_-]+/.exec(routeRef.value.fullPath);
+    switch (button) {
+      case BUTTON.B:
+        const backLink = document.querySelector('.back');
+        if (backLink) {
+          (backLink as HTMLElement).click();
+        }
+        break;
+      case BUTTON.A:
+        const selectedLink = document.querySelector(`.${SELECTED_CLASS}`);
+        if (selectedLink) {
+          (selectedLink as HTMLElement).click();
+        }
+        break;
+      case BUTTON.DOWN:
+        if (isProjectDetailPage) {
+          scroll(200);
+        } else {
+          selectLink(true);
+        }
+        break;
+      case BUTTON.UP:
+        if (isProjectDetailPage) {
+          scroll(-200);
+        } else {
+          selectLink(false);
+        }
+        break;
+      case BUTTON.RIGHT:
+        if (isProjectDetailPage) {
+          selectLink(true);
+        } else {
+          scroll(200);
+        }
+        break;
+      case BUTTON.LEFT:
+        if (isProjectDetailPage) {
+          selectLink(false);
+        } else {
+          scroll(-200);
+        }
+        break;
+      default:
+    }
   }
 }
-
 
 function onMouseDown(event: Event) {
   const elem: Element = event.target as Element;
@@ -150,13 +177,11 @@ function onKeyboardUp(event: KeyboardEvent) {
 }
 
 export default function initController(route: unknown) {
-  // routeRef = route as VueRoute;
+  routeRef = route as VueRoute;
   if (initCalled) {
     // avoid re-init on hot reload
-    console.log('skip2');
     return;
   }
-  console.log('selector', buttons.map((button) => `${CLASS_PREFIX}${button}`).join(' '));
   buttonElements = document.querySelectorAll(
     buttons.map((button) => `.${CLASS_PREFIX}${button}`).join(','),
   );
