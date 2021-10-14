@@ -24,8 +24,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  @media screen and (max-width: @mobile_view_width) {
+  // Only allow wrap title on mobile landscape and when the width is small
+  @media (max-width: @mobile_view_width) and (orientation: portrait) {
+    flex-wrap: wrap;
   }
 }
 

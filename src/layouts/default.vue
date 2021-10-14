@@ -41,8 +41,6 @@
 @frame_size_small: 5px;
 @frame_content_min_width: 360px;
 
-// @mobile_view_width: @frame_size_with_buttons * 2 + @mobile_view_width;
-
 .frame {
   display: flex;
   width: 100vw;
@@ -58,10 +56,20 @@
   height: 100%;
 }
 
+/**
+ * Mobile:
+ * On portrait: Always show bottom and hide left and right (Gameboy style)
+ * On landscape: Show left and right and hide bottom (GBA Style). If the
+ * screen width is smaller than @mobile_view_width, use Gameboy style instead.
+ * Computers:
+ * GBA style by default and use Gameboy style when browser width is smaller
+ * than @mobile_view_width
+ */
+
 .frame__left {
   flex: 0 0 @frame_size_with_buttons;
   background-color: @frame_color;
-  @media screen and (max-width: @mobile_view_width) {
+  @media screen and (max-width: @mobile_view_width), (orientation: portrait) {
     flex-basis: @frame_size_small;
   }
 }
@@ -121,7 +129,7 @@
 .frame__bottom {
   background-color: @frame_color;
   flex: 0 0 @frame_bottom_height;
-  @media screen and (max-width: @mobile_view_width) {
+  @media screen and (max-width: @mobile_view_width), (orientation: portrait) {
     flex-basis: @frame_size_with_buttons;
   }
 }
@@ -133,7 +141,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  @media screen and (max-width: @mobile_view_width) {
+  @media screen and (max-width: @mobile_view_width), (orientation: portrait) {
     display: none;
   }
 }
@@ -147,6 +155,9 @@
   justify-content: space-around;
   @media screen and (min-width: @mobile_view_width) {
     display: none;
+  }
+  @media (orientation: portrait) {
+    display: flex;
   }
 }
 </style>
