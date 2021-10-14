@@ -63,11 +63,14 @@ hot reload is supported thanks to Nuxt.js
 5. Test the new page with `npm run dev`
 6. Build and deploy
 
+### Nuxt.js
+
+Read [Nuxt Readme](Nuxt_README.md) for more details
 
 ## Build
 
 ```bash
-# This will generate the entire website at dist
+# This will generate the entire website at dist/
 npm run build
 # Test the build
 npm run test_dist
@@ -80,6 +83,3 @@ Open https://localhost:4000 to verify the build
 ```bash
 npm run deploy
 ```
-
-
-Read [Nuxt Readme](Nuxt_README.md) for more details

@@ -4,7 +4,7 @@ export default {
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: 'fsworld009',
+    title: 'Andy Lee (fsworld009)',
     htmlAttrs: {
       lang: 'en',
     },
