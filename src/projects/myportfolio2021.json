@@ -1,0 +1,20 @@
+{
+  "title": "My Portfolio (2021)",
+  "description": "My Portfolio website with a customized handheld game console theme. To demonstrate my ability as a professional software developer and my interest as a hobby gamer",
+  "achievements": [
+    "Customized theme and layout with CSS flexbox",
+    "Supported responsiveness with CSS media queries",
+    "Implemented static website with Vue.js and Nuxt.js, supported routing when deploying to GitHub pages",
+    "Implemented global store with pinia, an alternative to Vuex with Type support",
+    "Implemented keyboard control with vanilla JavaScript event and Dom APIs"
+  ],
+  "screenshots": [
+    "Portrait view on an Android phone",
+    "Landscape view on an Android phone",
+    "Portrait view on iPad Mini",
+    "Landscape view on iPad Mini"
+  ],
+  "links": [
+    {"name":"Project GitHub", "url":"https://github.com/fsworld009/fsworld009.github.io/"}
+  ]
+}
