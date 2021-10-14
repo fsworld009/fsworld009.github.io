@@ -67,7 +67,7 @@ function pressButton(button: BUTTON) {
   if (routeRef.value.path === '/') {
     (document.querySelector('a') as HTMLElement).click();
   } else {
-    const isProjectDetailPage = /projects\/[a-z0-9_-]+/.exec(routeRef.value.path);
+    const isProjectDetailPage = /projects\/[a-z0-9_-]+/.test(routeRef.value.path);
     switch (button) {
       case BUTTON.B:
         const backLink = document.querySelector('.back');

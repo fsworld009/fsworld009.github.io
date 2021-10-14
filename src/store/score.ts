@@ -16,8 +16,10 @@ export default defineStore('score', {
     score: (state) => {
       let score = 0;
       Object.keys(state.viewedPages).forEach((path) => {
-        if (/projects\/[a-z0-9_-]+/.exec(path)) {
+        if (/projects\/[a-z0-9_-]+/.test(path)) {
           score += 10000;
+        } else if (path === '/' || path === '/projects' || path === '/projects/') {
+          score += 0;
         } else {
           score += 5000;
         }

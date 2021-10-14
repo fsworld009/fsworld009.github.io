@@ -26,3 +26,14 @@
   }
 }
 </style>
+
+<script lang="ts">
+import Vue from 'vue';
+import pageSetup from '../assets/pageSetup';
+
+export default Vue.extend({
+  setup() {
+    pageSetup();
+  },
+});
+</script>

@@ -84,6 +84,7 @@
 <script lang="ts">
 import Vue from 'vue';
 import { ref } from '@nuxtjs/composition-api';
+import pageSetup from '../../assets/pageSetup';
 import projectListJson from '../../projects/index.json';
 
 interface Project {
@@ -97,6 +98,7 @@ interface Project {
 export default Vue.extend({
   setup() {
     const projectList = ref(projectListJson as Project[]);
+    pageSetup();
     return {
       projectList,
     };

@@ -156,9 +156,13 @@ import Vue from 'vue';
 import { onMounted, onBeforeUnmount, useRoute } from '@nuxtjs/composition-api';
 import initController from '../assets/controller';
 import useScore from '../store/score';
+import { MOBILE_TOP_MARGIN_SIZE, isMobile } from '../assets/utils';
 
 function onResize() {
   document.documentElement.style.height = `${window.innerHeight}px`;
+  if (isMobile()) {
+    document.documentElement.style.marginTop = `${MOBILE_TOP_MARGIN_SIZE}px`;
+  }
 }
 
 export default Vue.extend({
@@ -169,6 +173,7 @@ export default Vue.extend({
       initController(route);
       useScore();
       window.addEventListener('resize', onResize);
+      onResize();
     });
     onBeforeUnmount(() => {
       // This is only executed on client rendering
