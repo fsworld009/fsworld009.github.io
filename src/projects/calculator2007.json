@@ -1,13 +1,8 @@
 {
   "id":"calculator2007",
   "title":"Calculator (C++)",
-  "date":"Apr 2007",
-  "skills":[
-    "C++"
-  ],
-  "brief":"text based calculator in C++",
   "description":"A calculator that can parse math expressions and do the computation",
-  "points":[
+  "achievements":[
     "Support operators: +-*/",
     "Identify operator orders (handle *,/ prior to +,-)",
     "Support minus numbers",
@@ -16,7 +11,7 @@
     "Reject invalid expression"
   ],
   "screenshots":[
-    "Screenshot"
+    "Calculator with CLI"
   ],
   "links":[
     {
