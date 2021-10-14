@@ -37,7 +37,6 @@ function selectLink(next: boolean) {
 
   let nextIndex;
   for (let index = 0; index < links.length; index += 1) {
-    // console.log('linkElem', linkElem);
     const linkElem = links[index];
     if (linkElem.classList.contains(SELECTED_CLASS)) {
       if (next) {

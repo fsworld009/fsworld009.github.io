@@ -46,7 +46,16 @@
 .frame {
   display: flex;
   width: 100vw;
-  height: 100vh;
+  /* can't use 100vh on mobile as toolbars are counted as viewport
+   * instead use the window resize event to adjust document height on the fly,
+   * see script tag below for details.
+   * https://css-tricks.com/the-trick-to-viewport-units-on-mobile/#css-custom-properties-the-trick-to-correct-sizing
+   *
+   * Possible alternative: https://github.com/razumnyak/vue-div-100vh
+   * but not sure how does it play with Nuxt.js
+   */
+  // height: 100vh;
+  height: 100%;
 }
 
 .frame__left {
@@ -144,18 +153,26 @@
 
 <script lang="ts">
 import Vue from 'vue';
-import { onMounted, useRoute } from '@nuxtjs/composition-api';
+import { onMounted, onBeforeUnmount, useRoute } from '@nuxtjs/composition-api';
 import initController from '../assets/controller';
 import useScore from '../store/score';
 
+function onResize() {
+  document.documentElement.style.height = `${window.innerHeight}px`;
+}
+
 export default Vue.extend({
-  setup(props, context) {
+  setup() {
     onMounted(() => {
       // This is only executed on client rendering
-      // console.log('this.$nuxt.$route', this.$nuxt.$route);
       const route = useRoute();
       initController(route);
       useScore();
+      window.addEventListener('resize', onResize);
+    });
+    onBeforeUnmount(() => {
+      // This is only executed on client rendering
+      window.removeEventListener('resize', onResize);
     });
   },
 });
