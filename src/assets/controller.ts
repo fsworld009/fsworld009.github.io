@@ -119,6 +119,7 @@ function pressButton(button: BUTTON) {
 }
 
 function onMouseDown(event: Event) {
+  event.preventDefault();
   if (buttonIsPressed) {
     return;
   }
@@ -130,6 +131,7 @@ function onMouseDown(event: Event) {
 }
 
 function onMouseUp(event: Event) {
+  event.preventDefault();
   buttonIsPressed = false;
   const elem: Element = event.target as Element;
   elem.classList.remove(PRESSED_CLASS);
