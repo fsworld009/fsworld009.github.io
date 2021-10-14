@@ -24,14 +24,14 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   @media screen and (max-width: @mobile_view_width) {
-    // allow title text to be wrapped in mobile view
-    flex-wrap: wrap;
   }
 }
 
 .title__text {
   margin-left: @spacing_small;
+  margin-top: @spacing_small;
   font-size: @text_size_title;
   color: @text_color_green;
   flex-shrink: 1;

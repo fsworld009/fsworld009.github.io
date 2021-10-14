@@ -30,6 +30,8 @@ function scroll(offset: number) {
 }
 
 function selectLink(next: boolean) {
+  // TODO: This works for now because all a tags are valid links for dpad
+  // to navigate. Should probably wrap them in a component with a common class
   const links = document.querySelectorAll('a');
   if (links.length <= 0) {
     return;

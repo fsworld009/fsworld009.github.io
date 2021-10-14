@@ -4,6 +4,7 @@
     <div class="dpad__right button-RIGHT"></div>
     <div class="dpad__up button-UP"></div>
     <div class="dpad__down button-DOWN"></div>
+    <div class="dpad__middle"></div>
   </div>
 </template>
 
@@ -24,10 +25,11 @@
   height: @dpad_height;
   background-color: @button_color;
   position: absolute;
-  top: @dpad_adjacent_length - (@dpad_height / 2);
+  top: @dpad_width;
   &:hover {
     cursor: pointer;
   }
+  z-index: 1;
 }
 
 .dpad__right {
@@ -44,10 +46,21 @@
   &:hover {
     cursor: pointer;
   }
+  z-index: 1;
 }
 
 .dpad__down {
   .dpad__up();
   top: @dpad_adjacent_length;
+}
+
+.dpad__middle {
+  position: absolute;
+  background-color: @button_color;
+  width: @dpad_height;
+  height: @dpad_height;
+  left: @dpad_width;
+  top: @dpad_width;
+  z-index: 2;
 }
 </style>
