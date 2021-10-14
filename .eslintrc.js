@@ -33,6 +33,7 @@ module.exports = {
     // https://github.com/typescript-eslint/typescript-eslint/issues/2483
     'no-shadow': 'off',
     '@typescript-eslint/no-shadow': 'error',
+    'import/no-extraneous-dependencies': 'off',
   },
   settings: {
     // resolve import/no-unresolved when importing .ts files without writing

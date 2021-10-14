@@ -1,3 +1,6 @@
+import { ComputedRef } from '@vue/composition-api/dist/vue-composition-api.d';
+import { Route } from 'vue-router/types/router.d';
+
 enum BUTTON {
   UP = 'UP',
   DOWN = 'DOWN',
@@ -6,7 +9,7 @@ enum BUTTON {
   A = 'A',
   B = 'B',
 }
-let routeRef = { value: { fullPath: '' } };
+let routeRef: ComputedRef<Route>;
 const CLASS_PREFIX = 'button-';
 const PRESSED_CLASS = `${CLASS_PREFIX}pressed`;
 const SELECTED_CLASS = 'link-selected';
@@ -15,12 +18,6 @@ let buttonIsPressed = false;
 
 let buttonElements: NodeListOf<Element>;
 let initCalled = false;
-
-interface VueRoute {
-  value: {
-    fullPath: string;
-  };
-}
 
 function scrollToElem(elem: HTMLElement) {
   const scroller = document.querySelector('.frame__scroll') as HTMLElement;
@@ -68,10 +65,10 @@ function selectLink(next: boolean) {
 
 /* eslint-disable no-case-declarations */
 function pressButton(button: BUTTON) {
-  if (routeRef.value.fullPath === '/') {
+  if (routeRef.value.path === '/') {
     (document.querySelector('a') as HTMLElement).click();
   } else {
-    const isProjectDetailPage = /projects\/[a-z0-9_-]+/.exec(routeRef.value.fullPath);
+    const isProjectDetailPage = /projects\/[a-z0-9_-]+/.exec(routeRef.value.path);
     switch (button) {
       case BUTTON.B:
         const backLink = document.querySelector('.back');
@@ -183,8 +180,8 @@ function onKeyboardUp(event: KeyboardEvent) {
   }
 }
 
-export default function initController(route: unknown) {
-  routeRef = route as VueRoute;
+export default function initController(route: ComputedRef<Route>): void {
+  routeRef = route;
   if (initCalled) {
     // avoid re-init on hot reload
     return;

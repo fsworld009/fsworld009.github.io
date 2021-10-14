@@ -146,15 +146,16 @@
 import Vue from 'vue';
 import { onMounted, useRoute } from '@nuxtjs/composition-api';
 import initController from '../assets/controller';
+import useScore from '../store/score';
 
 export default Vue.extend({
   setup(props, context) {
     onMounted(() => {
       // This is only executed on client rendering
-      console.log('this', context);
+      // console.log('this.$nuxt.$route', this.$nuxt.$route);
       const route = useRoute();
-      console.log('called322', route);
       initController(route);
+      useScore();
     });
   },
 });
