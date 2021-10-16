@@ -46,7 +46,7 @@ a professional software developer and a hobby gamer.
 ### Dev Server
 
 ```bash
-npm bun build_projects
+npm run build_projects
 npm run dev
 ```
 
@@ -59,7 +59,7 @@ hot reload is supported thanks to Nuxt.js
 1. Update `src/projects/index.json`
 2. Create `src/projects/{project_id}.json`
 3. Add screenshots to `src/static/screenshots/{project_id}`
-4. Run `npm bun build_projects`
+4. Run `npm run build_projects`
 5. Test the new page with `npm run dev`
 6. Build and deploy
 
