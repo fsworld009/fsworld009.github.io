@@ -13,6 +13,11 @@
   box-sizing: border-box;
 }
 
+html {
+  // adjust default line-height for the font
+  line-height: 1.5;
+}
+
 
 body {
   color: @text_color_white;
@@ -26,6 +31,8 @@ a {
   text-decoration: inherit;
   padding: 8px;
   border: 2px solid @bg_color;
+  // use normalize.css line-height
+  line-height: 1.15;
   &:hover {
     border-color: @text_color_yellow;
   }

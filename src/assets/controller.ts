@@ -21,7 +21,10 @@ let initCalled = false;
 
 function scrollToElem(elem: HTMLElement) {
   const scroller = document.querySelector('.frame__scroll') as HTMLElement;
-  scroller.scrollTo(0, elem.offsetTop - 120);
+  // scroll row height is 24px and 8px margin-bottom
+  // frame__scroll has top margin 16px
+  // scroll up another 24px so that the selected block is visible
+  scroller.scrollTo(0, elem.offsetTop - 72);
 }
 
 function scroll(offset: number) {

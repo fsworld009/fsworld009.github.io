@@ -4,7 +4,11 @@
     <p class="project__description">{{ project.description }}</p>
     <h2 class="project__header">ACHIEVEMENTS</h2>
     <ul class="project__achievements">
-      <li v-for="(achi, index) in project.achievements" :key="`a${index}`">
+      <li
+        class="project__achievement"
+        v-for="(achi, index) in project.achievements"
+        :key="`a${index}`"
+      >
         {{ achi }}
       </li>
     </ul>
@@ -48,6 +52,11 @@
 .project__achievements {
   text-align: left;
 }
+
+.project__achievement {
+  margin-top: @spacing_small;
+}
+
 
 .project__link_container {
   margin-left: 18px;

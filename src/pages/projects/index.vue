@@ -59,6 +59,7 @@
 
 .project__brief {
   flex-grow: 1;
+  line-height: 1.3;
 }
 
 .project__tags {
