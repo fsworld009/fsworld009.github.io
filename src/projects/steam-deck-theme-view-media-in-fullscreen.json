@@ -1,0 +1,16 @@
+{
+  "title": "Steam Deck - View Media in Fullscreen",
+  "description": "Custom Steam Deck theme to display Media images in fullscreen. Powered by Decky Loader and CSS Loader.",
+  "achievements": [
+    "Investigated Steam Deck gaming mode UI HTML and CSS with Chrome browser dev tool",
+    "Created a new CSS Loader compatible theme with desired CSS overrides"
+  ],
+  "screenshots": [
+    "CSSLoader with the theme installed",
+    "Before and after applying the theme"
+  ],
+  "links": [
+    {"name": "Project GitHub", "url": "https://github.com/fsworld009/steam-deck-theme-view-media-in-fullscreen/"},
+    {"name": "Download releases", "url": "https://github.com/fsworld009/steam-deck-theme-view-media-in-fullscreen/releases/"}
+  ]
+}

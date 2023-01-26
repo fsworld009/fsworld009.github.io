@@ -1,0 +1,20 @@
+{
+  "title": "OBS Studio with projector patches",
+  "description": "Custom OBS Studio build with additional projector features I personally want, while related PR are under PR review.",
+  "achievements": [
+    "Setup build environment for OBS Studio on Windows and Linux",
+    "Implemented new features based on existing open PRs",
+    "Implemented brand new dialog window for the new feature with QT6",
+    "Sent PRs to OBS Studio project"
+  ],
+  "screenshots": [
+    "Context menu with adjust size options",
+    "Brand new Resize Window dialog, implemented with QT6"
+  ],
+  "links": [
+    {"name": "Download binaries", "url": "https://github.com/fsworld009/obs-studio/releases/"},
+    {"name": "Project GitHub", "url": "https://github.com/fsworld009/obs-studio/"},
+    {"name": "PR: UI: Support drag and move projector when clicking inside the window #8138", "url": "https://github.com/obsproject/obs-studio/pull/8138"},
+    {"name": "PR: UI: Resize projector window by resolution or scale #7851", "url": "https://github.com/obsproject/obs-studio/pull/7851"}
+  ]
+}
