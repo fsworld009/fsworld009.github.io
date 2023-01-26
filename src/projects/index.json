@@ -10,7 +10,7 @@
     "id": "obsstudio-projector-patches",
     "title" : "OBS Studio with projector patches",
     "date" : "Nov 2022",   
-    "tags" : ["C/C++", "QT6"],
+    "tags" : ["C++", "QT6"],
     "brief": "Custom OBS Studio build with additional projector features"
   },
   {
