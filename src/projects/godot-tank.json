@@ -1,0 +1,17 @@
+{
+  "title": "Godot Tank",
+  "description": "Custom Steam Deck theme to display Media images in fullscreen. Powered by Decky Loader and CSS Loader.",
+  "achievements": [
+    "Created game with Godot 4.x release",
+    "Utalized built-in 2D Physics engine and GDScript language",
+    "Supported 2 players"
+  ],
+  "screenshots": [
+    "Main menu",
+    "2 Players game"
+  ],
+  "links": [
+    {"name": "Project GitHub", "url": "https://github.com/fsworld009/godot-tank/"},
+    {"name": "Download releases", "url": "https://github.com/fsworld009/godot-tank/releases/"}
+  ]
+}
