@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/prolog2008", {data:[{}],fetch:{},mutations:void 0});

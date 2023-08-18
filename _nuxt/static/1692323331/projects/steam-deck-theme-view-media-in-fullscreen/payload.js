@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/steam-deck-theme-view-media-in-fullscreen", {data:[{}],fetch:{},mutations:void 0});

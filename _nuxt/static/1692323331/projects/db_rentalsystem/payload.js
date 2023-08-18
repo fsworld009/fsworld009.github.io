@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/db_rentalsystem", {data:[{}],fetch:{},mutations:void 0});

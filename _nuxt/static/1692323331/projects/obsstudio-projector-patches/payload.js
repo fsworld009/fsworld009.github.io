@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/obsstudio-projector-patches", {data:[{}],fetch:{},mutations:void 0});

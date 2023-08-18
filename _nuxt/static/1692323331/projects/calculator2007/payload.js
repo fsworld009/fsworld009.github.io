@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/calculator2007", {data:[{}],fetch:{},mutations:void 0});

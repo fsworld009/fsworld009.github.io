@@ -1,0 +1,1 @@
+__NUXT_JSONP__("/projects/db_insurancecompany", {data:[{}],fetch:{},mutations:void 0});
